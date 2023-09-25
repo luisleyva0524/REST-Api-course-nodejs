@@ -11,6 +11,7 @@ const {
 const app = express()
 app.disable('x-powered-by')
 app.use(express.json())
+app.use(express.static('web'))
 app.use(
   cors({
     origin: (origin, callback) => {
