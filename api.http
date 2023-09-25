@@ -1,0 +1,37 @@
+### Obtener todas las peliculas
+GET http://localhost:3000/movies
+
+### Obtener pelicula por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Obtener las peliculas por un genero
+GET http://localhost:3000/movies?genre=action
+
+### Crear una pelicula con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "id": "c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "director": "Christopher Nolan",
+    "duration": 152,
+    "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+    "genre": ["Action"]
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "The Intelestelar",
+    "year" : 2014,
+    "director": "Cristhoper Nolan"
+}
+
+### Eliminar una pelicula
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+
